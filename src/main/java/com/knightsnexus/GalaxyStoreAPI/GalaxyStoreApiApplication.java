@@ -3,6 +3,7 @@ package com.knightsnexus.GalaxyStoreAPI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class GalaxyStoreApiApplication {
 
@@ -11,5 +12,4 @@ public class GalaxyStoreApiApplication {
 		SpringApplication.run(GalaxyStoreApiApplication.class, args);
 
 	}
-
 }

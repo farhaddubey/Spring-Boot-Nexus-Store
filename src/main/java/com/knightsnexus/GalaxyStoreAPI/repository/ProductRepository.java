@@ -16,17 +16,17 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     // JPQL
     @Query("""
-           SELECT p  FROM PRODUCT p WHERE p.price > :price
+           SELECT p  FROM Product p WHERE p.price > :price
            """)
     List<Product> findExpensiveProducts(@Param("price") double price);
 
     // NATIVE SQL
     @Query(value =  """
-                    SELECT * FROM products WHERE name ILIKE %:keyword%
+                    SELECT * FROM product WHERE name ILIKE %:keyword%
                     """,
             nativeQuery = true)
     // ILILKE IS POSTGRE SQL FEATURE
     // LIKE -> CASE SENSITIVE
-    // ILIKE -> CASE INSENSITIVE 
+    // ILIKE -> CASE INSENSITIVE
     List<Product> searchNative(@Param("keyword") String keyword);
 }
