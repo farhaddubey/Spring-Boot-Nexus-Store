@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GalaxyStoreApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(GalaxyStoreApiApplication.class, args);
+
 	}
 
 }
